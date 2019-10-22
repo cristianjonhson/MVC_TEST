@@ -1,0 +1,16 @@
+﻿
+@{
+    ViewBag.Title = "libro1";
+}
+
+<h2>libro1</h2>
+@{ 
+    TestMVC.Models.Libro l = (TestMVC.Models.Libro)ViewData["milibro"];
+    
+}
+<!-- Para llamar al modelo y sus atributos primero se instancia como esta arriba
+    luego de esto se llama cada atributo de la sgte manera como esta a continuacion -->
+codigo: @l.codigo.ToString() <br/>
+persona: @l.nombre<br/>
+precio: @l.precio.ToString()<br/>
+

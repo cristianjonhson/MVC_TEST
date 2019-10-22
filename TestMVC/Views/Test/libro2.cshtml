@@ -1,0 +1,31 @@
+﻿
+@{
+    ViewBag.Title = "libro2";
+}
+@model TestMVC.Models.Libro
+
+
+<h2>libro2</h2>
+
+codigo: @Model.codigo.ToString() <br/>
+nombre: @Model.nombre<br/>
+
+
+@if (@Model.precio > 1000)
+{
+    <span style="background-color:yellow">
+        @Model.precio.ToString("C0")
+    </span>
+}
+else 
+{
+    <span style="background-color:red">
+        @Model.precio.ToString("N0")
+    </span>
+}
+
+<!-- C0 decimal con precio
+    N0 decimal si precio
+    
+    se puede llamar los int sin necesidad de instanciarlo a .ToString-->
+
